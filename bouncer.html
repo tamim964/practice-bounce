@@ -43,29 +43,44 @@
         .bat {
             width: 30px;
             position: relative;
-            left: 285px;
-            top: 200px;
-            transition: transform .3s ease-in 1.2s;
+            left: 295px;
+            top: 195px;
+            /* transition: transform .15s ease-in .99s; */
 
         }
 
         .field:hover .bat {
             transform: rotate(-45deg);
             transform-origin: top right;
+            transition: transform .15s ease-in .99s;
         }
 
         .ball {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background-color: maroon;
             border-radius: 50%;
             position: relative;
-            left: 700px;
+            left: 692px;
 
         }
 
         .field:hover .ball {
-            animation: sliding 2s ease-in-out .2s alternate;
+            animation: sliding 1.5s ease-in .2s 1 forwards;
+        }
+
+        .six {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            left: 400px;
+            top: -100px;
+            transform: scale(0);
+        }
+
+        .field:hover .six {
+            transform: scale(1.5);
+            transition: transform 1s ease 1.5s;
         }
 
         .pitch {
@@ -84,6 +99,7 @@
         <img class="bat" src="images/pngkit_cricket-kit-png_2534626.png" alt="">
         <div class="ball"></div>
         <div class="pitch"></div>
+        <img class="six" src="images/six.2.jpg" alt="">
     </div>
 </body>
 
