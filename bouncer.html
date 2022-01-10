@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes sliding {
+            0% {
+                left: 650px;
+                top: 20px;
+            }
+
+            25% {
+                left: 420px;
+                top: 145px;
+            }
+
+            50% {
+                left: 325px;
+                top: 90px;
+            }
+
+            100% {
+                left: 1000px;
+                top: -200px;
+            }
+        }
+
+        body {
+            margin: 0 auto;
+        }
+
+        .field {
+            width: 900px;
+            height: 600px;
+            background-color: green;
+            border-radius: 50%;
+        }
+
+        .bat {
+            width: 30px;
+            position: relative;
+            left: 285px;
+            top: 200px;
+            transition: transform .3s ease-in 1.2s;
+
+        }
+
+        .field:hover .bat {
+            transform: rotate(-45deg);
+            transform-origin: top right;
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: maroon;
+            border-radius: 50%;
+            position: relative;
+            left: 700px;
+
+        }
+
+        .field:hover .ball {
+            animation: sliding 2s ease-in-out .2s alternate;
+        }
+
+        .pitch {
+            width: 500px;
+            height: 10px;
+            background-color: peru;
+            position: relative;
+            left: 190px;
+            top: 143px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="field">
+        <img class="bat" src="images/pngkit_cricket-kit-png_2534626.png" alt="">
+        <div class="ball"></div>
+        <div class="pitch"></div>
+    </div>
+</body>
+
+</html>
